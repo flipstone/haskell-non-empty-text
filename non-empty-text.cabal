@@ -1,10 +1,10 @@
 cabal-version: 1.12
 
--- This file has been generated from package.yaml by hpack version 0.35.2.
+-- This file has been generated from package.yaml by hpack version 0.38.1.
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 31f29e2afdc641f83475d8957a7eb8b14f1cb8c80780a100049e72a7ccc91684
+-- hash: fec44e5211fe675e5a37ea4993b6ebb7e78ba649413df46f2c5d1a40bbef1073
 
 name:           non-empty-text
 version:        0.2.1
@@ -20,7 +20,7 @@ license:        MIT
 license-file:   LICENSE
 build-type:     Simple
 tested-with:
-    GHC == 8.8.4, GHC == 8.10.7
+    GHC == 8.8.4, GHC == 8.10.7, GHC == 9.0.2, GHC == 9.4.7, GHC == 9.6.7, GHC == 9.8.4, GHC == 9.10.2
 extra-source-files:
     CHANGELOG.md
 
@@ -47,6 +47,8 @@ library
   default-language: Haskell2010
   if flag(ci)
     ghc-options: -Wall -Werror -Wcompat -Widentities -Wincomplete-uni-patterns -Wincomplete-patterns -Wincomplete-record-updates -Wmissing-local-signatures -Wmissing-export-lists -Wmissing-import-lists -Wnoncanonical-monad-instances -Wredundant-constraints -Wpartial-fields -Wmissed-specialisations -Wno-implicit-prelude -Wno-safe -Wno-unsafe
+    if impl (ghc >= 9.8)
+      ghc-options: -Wterm-variable-capture -Wextended-warnings
   else
     ghc-options: -Wall -fwarn-incomplete-uni-patterns -fwarn-incomplete-record-updates
 
