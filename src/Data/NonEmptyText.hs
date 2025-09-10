@@ -37,6 +37,9 @@ data NonEmptyText =
   NonEmptyText Char Text.Text
   deriving (Eq, Ord, NFData, Generic)
 
+-- |
+-- Note that this instance uses 'toText', so two unequal NonEmptyTexts might be
+-- unequal even though they 'show' the same
 instance Show NonEmptyText where
   show = show . toText
 
@@ -140,6 +143,8 @@ length = (1 +) . Text.length . Data.NonEmptyText.tail
 --
 -- The 'Data.Text.Text' result is guaranteed to be non-empty. However, this is
 -- not reflected in the type.
+-- Note that the first 'Char' may be replaced with U+FFFD,
+-- which happens when 'Data.Text.cons' would also replace it.
 toText :: NonEmptyText -> Text.Text
 toText = uncurry Text.cons . uncons
 
