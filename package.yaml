@@ -6,7 +6,7 @@ description: |
   Typesafe thin wrapper around Data.Text to make impossible to be empty (to
   always hold at least on character)
 author: Antoine Catton, Trevis Elser, Flipstone Technology Partners
-maintainer: development@flipstone.com
+maintainer: maintainers@flipstone.com
 github: flipstone/haskell-non-empty-text
 license: MIT
 tested-with:
