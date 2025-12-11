@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: fec44e5211fe675e5a37ea4993b6ebb7e78ba649413df46f2c5d1a40bbef1073
+-- hash: fa45b30a1387af0914a5772b656120c49b0d78085774280716002774d162e5a2
 
 name:           non-empty-text
 version:        0.2.1
@@ -14,8 +14,8 @@ description:    Typesafe thin wrapper around Data.Text to make impossible to be 
 category:       Data, Text, NonEmpty
 homepage:       https://github.com/flipstone/haskell-non-empty-text#readme
 bug-reports:    https://github.com/flipstone/haskell-non-empty-text/issues
-author:         Antoine Catton, Trevis Elser
-maintainer:     Trevis Elser <trevis@flipstone.com>
+author:         Antoine Catton, Trevis Elser, Flipstone Technology Partners
+maintainer:     development@flipstone.com
 license:        MIT
 license-file:   LICENSE
 build-type:     Simple
